@@ -1,0 +1,6 @@
+# Forecast data from https://api.weather.gov/gridpoints/{office}/{grid X},{grid Y}/forecast
+# example request:
+GET https://api.weather.gov/points/39.7456,-97.0892
+
+# grid points or links from https://api.weather.gov/points/{latitude},{longitude}
+
