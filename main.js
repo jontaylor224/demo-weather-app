@@ -36,9 +36,10 @@ let mainElement = document.querySelector("main")
 
 let lat = 39.7456
 let long = -97.0892
-console.log(navigator.geolocation.getCurrentPosition(success, error))
+navigator.geolocation.getCurrentPosition(success, error)
 
 function success(position){
+    console.log(position)
     lat = position.coords.latitude
     long = position.coords.longitude
     fetch(`https://api.weather.gov/points/${lat},${long}`)
@@ -79,6 +80,7 @@ function displayForecast(arr){
         weatherCard.append(weatherIcon)
         let weatherDescription = document.createElement("h3")
         weatherDescription.append(currentItem.shortForecast)
+        weatherDescription.classList.add("description")
         weatherCard.append(weatherDescription)
         let temperature = document.createElement("p")
         temperature.append(`${currentItem.temperature} ${currentItem.temperatureUnit}`)

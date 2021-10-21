@@ -5,6 +5,12 @@ main {
 .weatherCard {
     display: flex;
     flex-direction: column;
+    flex-basis: 150px;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.description {
+    flex-basis: 100px;
+    text-align: center;
 }
